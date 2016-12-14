@@ -39,8 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (val === 100) {
             $progressBar.style.display = 'none';
             return;
-        }
+        }        
         $progressBar.style.width = val + '%';
+        $progressBar.setAttribute('aria-valuenow', val);
     }
 
     function evalPercentageAndUpdateProgressbar(imagesLoaded, totalImages) {
